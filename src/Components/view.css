@@ -1,0 +1,100 @@
+.conatiner{
+    padding: 3%;
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+    margin: auto;
+}
+
+.outer-conatiner{
+    padding: 2%;
+    margin: 2%;
+    background-color:  rgb(167, 212, 255);;
+    border-radius: 10px;
+
+}
+
+.item-container{
+    padding: 2%;
+    text-align: left;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: x-large;
+    background-color: #e2f2fa;
+    cursor: pointer;
+
+}
+
+.single-item{
+    margin: 1%;
+}
+
+
+.head-name{
+    margin: 1%;
+    font-size: xx-large;
+    position: relative;
+}
+
+.head-name,b {
+    position: relative;
+    animation-name: item-animation;
+    animation-duration: 2s;
+    animation-delay: 0s;
+}
+
+
+.multi-item{
+    margin: 1%;
+}
+
+.item-container,.blog-container,.btn-back:hover{
+    box-shadow: 5px 10px 18px #555454;
+    animation-name:itemlist-animation;
+    animation-duration: 3s;
+    animation-delay: 0s; 
+} 
+
+.outer-conatiner:hover{
+    box-shadow: 5px 10px 18px #555454;
+}
+
+.blog-container{
+    width: 70%;
+    position: absolute;
+    padding: 5%;
+    left: 10%;
+    top: 30%;
+    background-color: rgb(167, 212, 255);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: large;
+
+}
+
+.btn-back{
+    margin-top: 1%;
+    padding: 1%;
+    background-color: rgb(175, 8, 36);
+    font-weight: bolder;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: large;
+}
+
+img{
+    max-height: 40%;
+    max-width: 40%;
+    border-radius: 9px;
+}
+
+
+
+  @keyframes itemlist-animation {
+    0%   { 
+        transform:rotateY(0deg);
+    }
+    50%   { 
+        transform:rotateY(10deg);
+    }
+    100% {
+        transform:rotateY(0deg);
+    }
+  }
