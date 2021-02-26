@@ -113,7 +113,7 @@ class Home extends React.Component {
                                 )
                             }/>  
                             
-                              <Redirect from='/login'  /> 
+                              <Redirect from='/login' render={() => (window.location = "https://userappdata.herokuapp.com/login")}   /> 
                         </Switch> )
         }
       
