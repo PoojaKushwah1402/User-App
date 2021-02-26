@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 
 
 
-//import './index.css'
 import Data from './Const';
 import { UsersContext } from "./ContextApi";
 

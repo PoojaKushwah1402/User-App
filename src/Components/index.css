@@ -20,7 +20,7 @@
 
 .logout{
     position: relative;
-    left: 50%;
+    left: 40%;
     top: 1em;
 
 
@@ -28,8 +28,8 @@
 
 .logout-btn{
     cursor: pointer;
-    background-color: rgb(162, 9, 9);
-    border-radius: 40px;
+    background-color: rgb(228, 72, 72);
+    border-radius: 30px;
     padding: 12%;
     font-size: large;
 }
@@ -37,30 +37,40 @@
 .user{
     text-align: right;
     position: relative;
-    left: 50%;
+    left: 30%;
     font-size: x-large;
     padding: 1%;
 
 }
 
+.container{
+    display: flex;
+    justify-content:space-between; 
+}
+
+.search input{
+    height: 15%;
+    width: 50%;
+}
+
+.search{
+    width: 30%;
+}
+
 .info-heading{
     text-align: left;
-    width: 70%;
-    left: 5%;
-    position: relative;;
+    left: 2%;
+    position: relative;
     font-family: cursive;
     font-size: xx-large;
-    animation-name: heading-animation;
-    animation-duration: 1s;
-    animation-delay: 0s;
+
 
 }
 
 .Login-Container{
     width: 70%;
     margin: auto;
-    margin-top: 2%;
-    padding: 5%;
+    padding: 1%;
 }
 
 .Login-Container h1{
@@ -166,18 +176,12 @@ form div {
 }
 
 
+button:hover{box-shadow: 5px 10px 18px #f7f3f3;}
 
 
-
-@keyframes heading-animation {
-    0%   { 
-            color:rgb(250, 248, 248); 
-            left:-50%;
-            top:-200px;
-        }
-    100% {
-            color:rgb(17, 17, 17); 
-            left:5%;
-            top:0;
-        }
-  }
+.default{
+    width: 50%;
+    position: absolute;
+    top: 40%;
+    left: 30%;
+}

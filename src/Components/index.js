@@ -1,5 +1,5 @@
 import React from "react";
-import { Switch, Route } from 'react-router-dom'
+import { Redirect, Switch, Route } from 'react-router-dom'
 
 import Header from './Header'
 import ListView from "./List";
@@ -10,6 +10,7 @@ import fetchData from "./useApi";
 import  DetailView  from "./Detailview";
 import Blog from "./Blog";
 import Login from "./Login";
+import DefaultPage from "./Default";
 
 
 
@@ -93,21 +94,26 @@ class Home extends React.Component {
                                  />)
                             }/>
 
-                            <Route path = {`/blog/${this.state.focousBlog.id}`}                       
+                            <Route exact path = {`/blog/${this.state.focousBlog.id}`}                       
                                 render={(props) => (
                                 <Blog 
                                 blog={this.state.focousBlog}
                                  />)
                             }/>
 
+                            <Route > <DefaultPage /> </Route> 
+
                     </Switch> )
         } else {
             display =   (<Switch>
-                            <Route path = '/login'                      
+                            
+                            <Route exact path = '/login'                      
                                 render={(props) => ( 
                                 <Login Login = {this.onLogin} />
                                 )
                             }/>  
+                             <Route > <DefaultPage /> </Route> 
+                              <Redirect from='/login'  /> 
                         </Switch> )
         }
       

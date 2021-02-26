@@ -32,10 +32,15 @@ const Login = ({Login}) => {
     
     const onSubmit =(email, password, users, e) => {
         e.preventDefault();
-       // console.log(email, password);
         let input = {email : email, password : password}
         let user = ValidateUser(input ,users) 
-         user ? setHome(true) : wrongCredentials();
+      
+         if(user) {
+            setHome(true);
+            alert(`Hello ${user} please proceed to home page`)
+         }else{
+            wrongCredentials();
+         }
          setUserName(user)
          eraseInput();
     }
@@ -44,7 +49,6 @@ const Login = ({Login}) => {
 
 const getData = async (url, view) => {
     let responseData = await fetchData(url, view);
-   // console.log(responseData);
     setUsers(responseData);
 }
 

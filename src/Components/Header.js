@@ -9,13 +9,15 @@ import './index.css'
 const Header = ( props ) => {
 
     let logout =''
+    let url = '/login'
     if(props.name) {
+        url = '/home';
         logout = <Link  to='/login' className='link-dec logout'> <button className='logout-btn' onClick={()=>props.onLogout()} > Logout </button> </Link>
     }
 
     return(
 
-        <Link to='/home' className='link-dec' >
+        <Link to= {url} className='link-dec' >
             <div className='header' >
             <img src={logo} alt='info-detail logo' />
             <div className='heading'> InfoDetail</div>
