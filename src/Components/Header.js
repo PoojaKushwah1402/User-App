@@ -20,7 +20,7 @@ const Header = ( props ) => {
         <Link to= {url} className='link-dec' >
             <div className='header' >
             <img src={logo} alt='info-detail logo' />
-            <div className='heading'> InfoDetail</div>
+            <div className='heading'> Pooja Kushwah</div>
             <div className='user' > Hey {props.name} ! </div>
             {logout}
             
