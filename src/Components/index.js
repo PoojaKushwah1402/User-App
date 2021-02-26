@@ -112,7 +112,7 @@ class Home extends React.Component {
                                 <Login Login = {this.onLogin} />
                                 )
                             }/>  
-                             <Route > <DefaultPage /> </Route> 
+                            
                               <Redirect from='/login'  /> 
                         </Switch> )
         }
